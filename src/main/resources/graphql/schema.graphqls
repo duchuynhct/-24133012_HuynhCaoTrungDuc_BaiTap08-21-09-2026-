@@ -1,0 +1,72 @@
+type Category {
+    id: ID!
+    name: String!
+    images: String
+    products: [Product]
+    users: [User]
+}
+
+type User {
+    id: ID!
+    fullname: String
+    email: String
+    phone: String
+    categories: [Category]
+    products: [Product]
+}
+
+type Product {
+    id: ID!
+    title: String!
+    quantity: Int
+    description: String
+    desc: String
+    price: Float
+    category: Category
+    user: User
+}
+
+input CategoryInput {
+    name: String!
+    images: String
+}
+
+input ProductInput {
+    title: String!
+    quantity: Int
+    description: String
+    desc: String
+    price: Float
+    categoryId: ID
+    userId: ID
+}
+
+type Query {
+    # 1. Hiển thị tất cả product có price từ thấp đến cao (Yêu cầu bài tập)
+    productsByPriceAsc: [Product]
+
+    # 2. Lấy tất cả product của 01 category (Yêu cầu bài tập)
+    productsByCategory(categoryId: ID!): [Product]
+
+    # Các query bổ trợ
+    products: [Product]
+    productById(id: ID!): Product
+
+    categories: [Category]
+    categoryById(id: ID!): Category
+
+    users: [User]
+    userById(id: ID!): User
+}
+
+type Mutation {
+    # 3. CRUD bảng product (Yêu cầu bài tập)
+    createProduct(input: ProductInput!): Product
+    updateProduct(id: ID!, input: ProductInput!): Product
+    deleteProduct(id: ID!): Boolean
+
+    # 3. CRUD bảng category (Yêu cầu bài tập)
+    createCategory(input: CategoryInput!): Category
+    updateCategory(id: ID!, input: CategoryInput!): Category
+    deleteCategory(id: ID!): Boolean
+}

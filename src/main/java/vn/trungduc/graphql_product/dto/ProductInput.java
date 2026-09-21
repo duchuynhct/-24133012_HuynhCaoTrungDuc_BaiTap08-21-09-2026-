@@ -13,7 +13,12 @@ public class ProductInput {
     private String title;
     private Integer quantity;
     private String description;
+    private String desc;
     private Double price;
     private Long categoryId;
     private Long userId;
+
+    public String getDescription() {
+        return description != null ? description : desc;
+    }
 }

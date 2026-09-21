@@ -33,4 +33,8 @@ public class Product {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "userid")
     private User user;
+
+    public String getDesc() {
+        return this.description;
+    }
 }
