@@ -1,6 +1,6 @@
 # BÀI TẬP 08: SPRING BOOT GRAPHQL & AJAX
 
-* **Trường**: Đại học Sư phạm Kỹ thuật TP. Hồ Chí Minh (HCMUTE)
+* **Trường**: Đại học Công nghệ Kỹ thuật TP. Hồ Chí Minh (HCM-UTE)
 * **Khoa**: Công nghệ Thông tin - Bộ môn Công nghệ Phần mềm
 * **Môn học**: Lập trình Web (WEBPR330479)
 * **Họ và tên**: Huỳnh Cao Trung Đức
